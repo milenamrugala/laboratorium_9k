@@ -1,7 +1,20 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    val contract = Contract("Fixed Term")
+    val head = Head(
+        "Barbara",
+        "Nowak",
+        12000.0,
+        contract,
+        "Customer Service",
+        2000.0)
+    println(head)
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val secondContract = Contract("B2B")
+    val freelancer = PeriodicFreelancer(
+        "Andrzej",
+        "Nowak",
+        15000.0,
+        secondContract,
+        12)
+    println(freelancer)
 }
